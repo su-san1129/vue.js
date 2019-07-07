@@ -5,13 +5,11 @@
     <title>サンプル</title>
   </head>
   <body>
-   <div id="app">
-    <template v-if="stock >= 1">
-      <span class="num">残り{{stock}}個</span>
-      <button class="btn" v-on:click="onDeleteItem">削除</button>
-    </template>
-    {{ message }}
-   </div>
+    <div id="app">
+      <label>ケーキはお好きですか？:{{answer}}</label>
+      <input id="cake" type="checkbox" v-model="answer" true-value="はい" false-value="いいえ">
+      <label for="cake">チェックしてください</label>
+    </div>
     <!-- ここからjavascript -->
     <script src="https://jp.vuejs.org/js/vue.js"></script>
     <script src="main.js"></script>
