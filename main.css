@@ -1,13 +1,21 @@
-/*Enter フェーズの開始前と、Leaveフェーズ終了後のスタイル*/
-.v-enter, .v-leave-to{
+/*シンプルなフェードイン*/
+.fade-enter-active, .fade-leave-active {
+	transiton: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
 	opacity: 0;
 }
-/*Enter フェーズの終了時と、Leaveフェーズ開始時のスタイル*/
-.v-enter-to, .v-leave {
-	opacity: 1;
+
+/*左からスライドイン*/
+.slideInLeft-enter-active, .sllideInLeft-leave-active {
+	transition: opacity 0.5s, transform 0.5s;
 }
 
-/*Enter フェーズ継続中と、Leaveフェーズ継続中のスタイル*/
-.v-enter-active, .v-leave-active {
-	transition: opacity 0.5s;
+.slideInLeft-enter, .slideInLeft-leave-to {
+	opacity: 0;
+	transform: translateX(-100%);
+}
+
+.slideInLeft-enter-to, .slideInLeft-leave{
+	transform: translateX(0);
 }
