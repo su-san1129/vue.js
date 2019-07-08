@@ -6,10 +6,14 @@
   </head>
   <body>
     <div id="app">
-      <p>ご注文をお選びください:{{selection}}</p>
-      <label><input type="checkbox" v-model="answer" value="ケーキ">ケーキ</label>
-      <label><input type="checkbox" v-model="answer" value="紅茶">紅茶</label>
-      <label><input type="checkbox" v-model="answer" value="コーヒー">コーヒー</label>
+     <p>当店のご利用頻度は？{{answer}}</p>
+     <select v-model="answer">
+       <option disabled value="">選択してください</option>
+       <option value="初めて">初めて</option>
+       <option value="週一回以上">週一回以上</option>
+       <option value="月二回以上">月二回以上</option>
+       <option value="半年に一回">半年に一回</option>
+     </select>
     </div>
     <!-- ここからjavascript -->
     <script src="https://jp.vuejs.org/js/vue.js"></script>
